@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-30T09:14:59 IST" name="Default suite" finished-at="2022-08-30T09:15:00 IST" duration-ms="69">
+    <groups>
+    </groups>
+    <test started-at="2022-08-30T09:14:59 IST" name="Default test" finished-at="2022-08-30T09:15:00 IST" duration-ms="69">
+      <class name="A97_Pattern_Program">
+        <test-method signature="ThreePattern()[pri:-2, instance:A97_Pattern_Program@5136d012]" started-at="2022-08-30T09:15:00 IST" name="ThreePattern" finished-at="2022-08-30T09:15:00 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThreePattern -->
+        <test-method signature="SevenPattern()[pri:-1, instance:A97_Pattern_Program@5136d012]" started-at="2022-08-30T09:15:00 IST" name="SevenPattern" finished-at="2022-08-30T09:15:00 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SevenPattern -->
+        <test-method signature="DiagonalShape()[pri:0, instance:A97_Pattern_Program@5136d012]" started-at="2022-08-30T09:15:00 IST" name="DiagonalShape" finished-at="2022-08-30T09:15:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DiagonalShape -->
+      </class> <!-- A97_Pattern_Program -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

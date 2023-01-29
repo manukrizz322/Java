@@ -12,7 +12,7 @@ public class A06_Arithmetic_Assignment {
 		System.out.println(a);
 		a*=10;
 		System.out.println(a);
-		a/=10;
+		a/=10;//a=a/10
 		System.out.println(a);
 		a%=10;
 		System.out.println(a);

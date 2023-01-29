@@ -1,25 +1,36 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-class ReflectDemo{
+class ReflectDemo {
+	@SuppressWarnings("unused")
 	private void method1() {
 		System.out.println("Method-1 in Private");
 	}
-	private void method2(String name) {
-		System.out.println("Method-2 in Private "+name);
+
+	@SuppressWarnings("unused")
+	private void method2(String name, String nkjj) {
+		System.out.println("Method-2 in Private " + name + nkjj);
 	}
 }
+
 public class A96_Calling_Private_Method_using_Reflection_API {
-public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, InvocationTargetException {
-	ReflectDemo o=new ReflectDemo();
-	Class c=o.getClass();
-	
-	Method m1 = c.getDeclaredMethod("method1", null);
-	m1.setAccessible(true);
-	m1.invoke(o, null);
-	
-	Method m2=c.getDeclaredMethod("method2", String.class);
-	m2.setAccessible(true);
-	m2.invoke(o, "Tutor Joes");//object,parameter
-}
+
+	public static Method getMethod(Object o, String methodnme, @SuppressWarnings("rawtypes") Class... paratypes)
+			throws NoSuchMethodException, SecurityException {
+		Method declaredMethod = o.getClass().getDeclaredMethod(methodnme, paratypes);
+		declaredMethod.setAccessible(true);
+		return declaredMethod;
+
+	}
+
+	public static void main(String[] args)
+			throws NoSuchMethodException, SecurityException, IllegalAccessException, InvocationTargetException {
+		ReflectDemo o = new ReflectDemo();
+
+		getMethod(o, "method1", null).invoke(o, null);
+
+		getMethod(o, "method2", String.class, String.class).invoke(o, "sdkjds", "hjdslkslksl");
+
+		
+	}
 }
